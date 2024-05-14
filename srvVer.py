@@ -1,7 +1,7 @@
 import cv2
 from cvzone.FaceDetectionModule import FaceDetector
 
-video = cv2.VideoCature(0)
+video = cv2.VideoCapture(1)
 
 detector = FaceDetector()
 
@@ -10,5 +10,5 @@ while True:
     img, bboxes = detector.findFaces(img,draw=True)
 
     cv2.imshow('Resultado',img)
-    if cv2.waitKey(1) = 27:
+    if cv2.waitKey(1) == 27:
         break
